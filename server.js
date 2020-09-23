@@ -5,10 +5,10 @@ var cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-const auth = require('../server/middlewares/auth')
+const auth = require('./middlewares/auth')
 const jwt = require('jsonwebtoken');
-const httpEnum = require('../server/enum/Ehttp')
-var User = require('../server/models/user')
+const httpEnum = require('./enum/Ehttp')
+var User = require('./models/user')
 
 mongoose.connect(process.env.URL_MONGODB, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
 
